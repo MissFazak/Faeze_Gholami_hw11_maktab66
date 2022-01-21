@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="p-0 m-0 container-fluid">
+      <header class="position-absolute"></header>
+    </div>
+    <div
+      class="row justify-content-md-center align-items-center m-auto py-5 col-12"
+      style="width: 600px"
+    >
+      <div class="col-12">
+        <div class="row">
+          <h3 class="text-uppercase text-white col-11">t o d o</h3>
+          <button
+            class="col-1"
+            onclick="dark()"
+            style="all: unset; cursor: pointer; width: 20px; height: 20px"
+          >
+            <section onclick="myFunction(this)"></section>
+          </button>
+        </div>
+        <div class="d-flex rounded bg-white w-100 mb-5">
+          <div id="list2" class="d-flex rounded w-100">
+            <div class="m-2">
+              <input id="select-all" type="checkbox" onclick="myToggle();" />
+            </div>
+            <input
+              class="w-100 border-0 my-1 p-2"
+              id="myInput"
+              type="text"
+              placeholder="Create a new todo..."
+              style="
+                font-family: Century Gothic;
+                background-color: rgba(255, 222, 173, 0);
+              "
+              value=""
+            />
+            <button id="myBtn" onclick="newElement()" style="display: none">
+              Button
+            </button>
+          </div>
+        </div>
+        <div>
+          <ul id="myUL"></ul>
+        </div>
+        <div class="rounded w-100 bg-white align-items-center">
+          <div class="row w-100 rounded mx-0" id="list">
+            <p class="col-3 mt-3" id="item">
+              <span id="counter"></span> item left
+            </p>
+            <div class="col-6">
+              <div class="row justify-content-around mt-3 px-lg-5 px-sm-0">
+                <p id="all" onclick="all1()">All</p>
+                <p id="active" onclick="active()">Active</p>
+                <p id="completed" onclick="complet()">Completed</p>
+              </div>
+            </div>
+            <p class="col-3 mt-3 px-0" onclick="clearCom()">Clear Completed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
